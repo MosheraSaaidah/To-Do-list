@@ -1,0 +1,137 @@
+body {
+  direction: rtl;
+  font-family: "Markazi Text", serif;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(image/pexels-photo-1226398.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.main-div {
+  position: relative;
+}
+.table-tasks {
+  width: 800px;
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  backdrop-filter: blur(7px);
+  right: 355px;
+  margin-top: 100px;
+  border-radius: 40px 0px;
+}
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header {
+  background-image: linear-gradient(
+    to right,
+    rgba(136, 64, 187, 0.653),
+    #ee82ee
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  border-radius: 20px 0px ;
+  margin-right: 14px;
+}
+ 
+.table-tasks .a {
+  font-size: 40px;
+  margin-top: 3px;
+  margin-right: 15px;
+}
+
+h1 {
+  display: inline;
+  font-weight: bold;
+  font-size: 35px;
+}
+.shape {
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+}
+
+#tasks {
+  width: 90%;
+  position: absolute;
+  right: 30px;
+} 
+
+#add-btn {
+  background-color: rgba(255, 255, 255, 0.494);
+  border: none;
+  font-size: 25px;
+  position: absolute;
+  right: 30px;
+}
+button {
+  background-color: rgba(255, 255, 255, 0.494);
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+.task {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.392);
+  border-radius: 10px;
+  margin: 15px;
+  background-color: rgba(255, 255, 255, 0.494);
+}
+.done {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  border-radius: 10px;
+  margin: 15px;
+  background-color: #ee82ee84;
+}
+.done .task-info h2 {
+  text-decoration: line-through;
+}
+.done .btn-insert {
+  background-image: linear-gradient(
+    to right,
+    rgba(136, 64, 187, 0.653),
+    #ee82ee
+    );
+  border: 1.5px  #eeeeee9f dashed;
+}
+
+.task .task-info {
+  width: 70%;
+  margin-right: 8px;
+}
+.task .task-info h2 {
+  font-weight: normal;
+}
+.task-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+}
+.material-symbols-outlined {
+  line-height: 1.55;
+}
+@media (max-width: 600px) {
+  .task .task-info {
+    font-size: 10px;
+  }
+  .task-action {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    left: 55px;
+    margin-top: 20px;
+    
+  }
+}
