@@ -42,10 +42,9 @@ body {
   margin-right: 14px;
   transition:  0.5s;
 }
-
 .H:hover {
 background-color: red;
-transform: scale(1.05); 
+transform: scale(1.06); 
 }
 
 .table-tasks .a {
