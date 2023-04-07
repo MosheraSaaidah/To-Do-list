@@ -122,7 +122,7 @@ button {
 }
 @media (max-width: 600px) {
   .task .task-info {
-    font-size: 10px;
+    font-size: 12px;
   }
   .task-action {
     display: flex;
@@ -131,7 +131,7 @@ button {
     gap: 5px;
     position: absolute;
     left: 55px;
-    margin-top: 20px;
+    margin-top: 10px;
     
   }
 }
