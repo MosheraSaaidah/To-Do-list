@@ -1,6 +1,12 @@
 ///Read on Cred
 //this Data is Static
-let tasks = [];
+let tasks = [
+  {
+    title: "انهاء المشروع",
+    date: "15/10/2030",
+    isDone: false,
+  },
+];
 
 /// Get local Storage
 function getTaskFromStorage() {
@@ -46,7 +52,6 @@ function fillTask() {
   } //End for of loop
 } //End Fun FillTask();
 fillTask();
-
 //   Add  Element :
 let taskName;
 document.getElementById("add-btn").addEventListener("click", function () {
@@ -76,7 +81,6 @@ document.getElementById("add-btn").addEventListener("click", function () {
   });
 });
 // End Addetion
-
 // // Delete Task
 function deleteTask(valu) {
   let task = tasks[valu];
@@ -119,7 +123,6 @@ function editTask(valu) {
     }
   });
 }
-
 function toggleTask(valu) {
   let task = tasks[valu];
   task.isDone = !task.isDone;
@@ -130,4 +133,11 @@ function toggleTask(valu) {
 function storeTask() {
   let taskString = JSON.stringify(tasks);
   localStorage.setItem("tasks", taskString);
+}
+// change Background :
+function color(z)
+{
+let a = getComputedStyle(z);
+let b = a.backgroundColor ; 
+document.getElementsByTagName("body")[0].style.backgroundColor = b;
 }
