@@ -1,12 +1,5 @@
-///Read on Cred
 //this Data is Static
-let tasks = [
-  {
-    title: "انهاء المشروع",
-    date: "15/10/2030",
-    isDone: false,
-  },
-];
+let tasks = [];
 
 /// Get local Storage
 function getTaskFromStorage() {
@@ -22,6 +15,7 @@ function fillTask() {
   //Begin For of loop
   for (task of tasks) {
     let demo = `
+    
           <div class="task ${task.isDone ? "done" : ""}">
           <div class="task-info">
           <div>
@@ -52,14 +46,15 @@ function fillTask() {
   } //End for of loop
 } //End Fun FillTask();
 fillTask();
+
 //   Add  Element :
 let taskName;
 document.getElementById("add-btn").addEventListener("click", function () {
   let sweetAlert = swal({
-    text: "يرضى عليك أدخل المهمة وأنجزها طيب !!",
+    text: "يرجى ادخال المهمة الجديدة",
     content: "input",
     button: {
-      text: "متأكد ؟؟",
+      text: "تأكيد ",
       closeModal: true,
     },
   }).then((value) => {
@@ -81,11 +76,14 @@ document.getElementById("add-btn").addEventListener("click", function () {
   });
 });
 // End Addetion
+
 // // Delete Task
 function deleteTask(valu) {
   let task = tasks[valu];
   swal({
-    title: "هل أنت متأكد من حذف مهمه " + task.title + "؟؟",
+    title: "هل أنت متأكد من حذف مهمة " +"''"+ task.title + "''"+" ؟؟",
+    text: "للذتكير بمجرد الحذف, لن تتمكن من استعادة هذه المهمة",
+    icon: "warning",
     buttons: true,
   }).then((value) => {
     let isYes = value;
@@ -103,7 +101,7 @@ function deleteTask(valu) {
 function editTask(valu) {
   let task = tasks[valu];
   let sweetAlert = swal({
-    text: "هل تريد تعديل مهمة" + " " + task.title + " حقاً !!",
+    text: "هل تريد تعديل مهمة" + " " + task.title ,
     content: {
       element: "input",
       attributes: {
@@ -123,6 +121,7 @@ function editTask(valu) {
     }
   });
 }
+
 function toggleTask(valu) {
   let task = tasks[valu];
   task.isDone = !task.isDone;
@@ -134,6 +133,8 @@ function storeTask() {
   let taskString = JSON.stringify(tasks);
   localStorage.setItem("tasks", taskString);
 }
+
+
 // change Background :
 function color(z)
 {
