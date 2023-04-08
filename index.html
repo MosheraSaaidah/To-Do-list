@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,23 +23,30 @@
     <link rel="stylesheet" href="css/style.css">
     <title>To Do List</title>
 </head>
+
 <body>
     <!-- Start Main Div  -->
     <div class="main-div">
         <div class="center-div">
             <!-- Start Table Tasks -->
             <div class="table-tasks">
+                <div class="center-btn">
+                    <span id="1" onclick= "color(this)"  class="chang-bac purple"></span>
+                    <span  id="2" onclick= "color(this)"  class="chang-bac brown"></span>
+                    <span onclick= "color(this)"  class="chang-bac pink"></span>
+                </div>
                 <div id="header" class="H">
                     <h1>المهام اليومية </h1>
                     <span class="material-symbols-outlined a">
                         fact_check
                     </span>
-                    <button id="add-btn"  class="shape">
+                    <button id="add-btn"  class="shape ">
                         <span><i class="fa-sharp fa-solid fa-plus fa-beat" style="color: #010101;"></i></span>
                     </button>
                 </div>
                 <!-- Start Tasks  -->
                  <div id="tasks">
+
                 </div>
                 <!-- End Tasks -->
                 <!-- End Table Tasks -->
